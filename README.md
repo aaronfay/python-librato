@@ -139,6 +139,20 @@ for metric in api.list_metrics():
 Do you want to contribute? Do you need a new feature? Please open a
 [ticket](https://github.com/librato/python-librato/issues).
 
+### Developing
+Clone the repo and install the development dependencies:
+```python
+pip install -e .[develop]
+```
+If you get an error similar to the one below you need to **upgrade to pip 1.2**.
+```
+--editable=.[develop] should be formatted with svn+URL, git+URL, hg+URL or bzr+URL
+```
+
+#### Run tests
+Just run `nose` and it will discover and run the test suite.
+
+
 ## Contributors
 
 The original version of `python-librato` was conceived/authored/released by Chris Moyer (AKA [@kopertop](https://github.com/kopertop)). He's

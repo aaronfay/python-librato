@@ -8,6 +8,12 @@ if sys.argv[-1] == 'publish':
   os.system('python setup.py sdist upload')
   sys.exit()
 
+extras = {
+  'develop': [
+    'nose',
+  ]
+}
+
 setup(
   name = "librato-metrics",
   version = "0.4.8", # Update also in __init__ ; look into zest.releaser to avoid having two versions
@@ -31,4 +37,5 @@ setup(
   ],
   dependency_links = [],
   install_requires = ['six'],
+  extras_require=extras,
 )
